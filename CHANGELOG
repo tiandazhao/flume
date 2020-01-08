@@ -1,4 +1,4 @@
-Release Notes - Flume - Version 1.9.0
+Release Notes - Flume - Version 1.9.0-es6.3.2
 
 ** New Feature
     * [FLUME-2071] - Flume Context doesn't support float or double configuration values.
