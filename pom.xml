@@ -27,7 +27,7 @@ limitations under the License.
   <modelVersion>4.0.0</modelVersion>
   <groupId>org.apache.flume</groupId>
   <artifactId>flume-parent</artifactId>
-  <version>1.9.0</version>
+  <version>1.9.0-es6.3.2</version>
   <packaging>pom</packaging>
 
   <name>Apache Flume</name>
@@ -61,7 +61,8 @@ limitations under the License.
     <commons-lang.version>2.5</commons-lang.version>
     <curator.version>2.6.0</curator.version>
     <derby.version>10.14.1.0</derby.version>
-    <elasticsearch.version>0.90.1</elasticsearch.version>
+<!--    <elasticsearch.version>0.90.1</elasticsearch.version>-->
+    <elasticsearch.version>6.3.2</elasticsearch.version>
     <fasterxml.jackson.version>2.9.7</fasterxml.jackson.version>
     <fest-reflect.version>1.4</fest-reflect.version>
     <geronimo-jms.version>1.1.1</geronimo-jms.version>
@@ -126,7 +127,7 @@ limitations under the License.
     <module>flume-ng-sinks</module>
     <module>flume-ng-sources</module>
     <module>flume-ng-node</module>
-    <module>flume-ng-dist</module>
+<!--    <module>flume-ng-dist</module>-->
     <module>flume-ng-channels</module>
     <module>flume-ng-legacy-sources</module>
     <module>flume-ng-clients</module>
@@ -137,6 +138,7 @@ limitations under the License.
     <module>flume-shared</module>
     <module>flume-ng-configfilters</module>
     <module>build-support</module>
+    <module>flume-start</module>
   </modules>
 
   <profiles>
@@ -448,10 +450,10 @@ limitations under the License.
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-checkstyle-plugin</artifactId>
       </plugin>
-      <plugin>
-        <groupId>com.github.spotbugs</groupId>
-        <artifactId>spotbugs-maven-plugin</artifactId>
-      </plugin>
+<!--      <plugin>-->
+<!--        <groupId>com.github.spotbugs</groupId>-->
+<!--        <artifactId>spotbugs-maven-plugin</artifactId>-->
+<!--      </plugin>-->
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-pmd-plugin</artifactId>
