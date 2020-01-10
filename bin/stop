@@ -1,13 +1,1 @@
-#!/bin/bash
-
-ps aux  |grep java| grep flume-pushes |awk '{print $2}'  |xargs kill
-
-
-sleep 5
-if [[ $(ps aux  |grep java| grep flume-pushes|grep -v grep |wc -l) -gt 0  ]]
-then
-        ps aux  |grep java| grep flume-pushes |awk '{print $2}'  |xargs kill
-fi
-
-cd /data/logs/flume-pushes/
-mv   flume.init.log  `date +%s`.flume.init.log
+#!/bin/bashps aux  |grep java| grep flume-pushes |awk '{print $2}'  |xargs killsleep 5if [[ $(ps aux  |grep java| grep flume-pushes|grep -v grep |wc -l) -gt 0  ]]then        ps aux  |grep java| grep flume-pushes |awk '{print $2}'  |xargs killficd /data/logs/flume-pushes/mv   flume.init.log  `date +%s`.flume.init.log
