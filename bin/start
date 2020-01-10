@@ -1,0 +1,10 @@
+#!/bin/bash
+
+
+#mkdir at first
+mkdir -p /data/logs/flume-pushes/
+mkdir -p /mnt/flume
+
+cd /data/apps/flume-pushes/
+
+nohup bin/flume-ng agent -c conf --conf-file conf/push-flume.conf --name a1 -Dflume.root.logger=info,console -Dflume.monitoring.type=http -Dflume.monitoring.port=34556 >>/data/logs/flume-pushes/flume.init.log 2>&1  &

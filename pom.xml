@@ -27,7 +27,7 @@ limitations under the License.
   <modelVersion>4.0.0</modelVersion>
   <groupId>org.apache.flume</groupId>
   <artifactId>flume-parent</artifactId>
-  <version>1.8.0</version>
+  <version>1.8.0-es6-tian</version>
   <packaging>pom</packaging>
 
   <name>Apache Flume</name>
@@ -71,7 +71,7 @@ limitations under the License.
     <guava-old.version>11.0.2</guava-old.version>
     <hadoop2.version>2.4.0</hadoop2.version>
     <httpclient.version>4.3.5</httpclient.version>
-    <httpclient-old.version>4.2.1</httpclient-old.version>
+    <httpclient-old.version>4.3.5</httpclient-old.version>
     <irclib.version>1.10</irclib.version>
     <jersey.version>1.8</jersey.version>
     <jetty.version>6.1.26</jetty.version>
@@ -123,7 +123,7 @@ limitations under the License.
     <module>flume-ng-sinks</module>
     <module>flume-ng-sources</module>
     <module>flume-ng-node</module>
-    <module>flume-ng-dist</module>
+<!--    <module>flume-ng-dist</module>-->
     <module>flume-ng-channels</module>
     <module>flume-ng-legacy-sources</module>
     <module>flume-ng-clients</module>
@@ -132,6 +132,7 @@ limitations under the License.
     <module>flume-tools</module>
     <module>flume-ng-auth</module>
     <module>flume-shared</module>
+    <module>flume-start</module>
   </modules>
 
   <profiles>
@@ -1634,19 +1635,19 @@ limitations under the License.
         </configuration>
       </plugin>
 
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-checkstyle-plugin</artifactId>
-        <version>${checkstyle.plugin.version}</version>
-        <configuration>
-          <configLocation>flume/checkstyle.xml</configLocation>
-          <suppressionsLocation>flume/checkstyle-suppressions.xml</suppressionsLocation>
-          <suppressionsFileExpression>checkstyle.suppressions.file</suppressionsFileExpression>
-          <encoding>UTF-8</encoding>
-          <includeTestSourceDirectory>true</includeTestSourceDirectory>
-          <linkXRef>false</linkXRef>
-        </configuration>
-      </plugin>
+<!--      <plugin>-->
+<!--        <groupId>org.apache.maven.plugins</groupId>-->
+<!--        <artifactId>maven-checkstyle-plugin</artifactId>-->
+<!--        <version>${checkstyle.plugin.version}</version>-->
+<!--        <configuration>-->
+<!--          <configLocation>flume/checkstyle.xml</configLocation>-->
+<!--          <suppressionsLocation>flume/checkstyle-suppressions.xml</suppressionsLocation>-->
+<!--          <suppressionsFileExpression>checkstyle.suppressions.file</suppressionsFileExpression>-->
+<!--          <encoding>UTF-8</encoding>-->
+<!--          <includeTestSourceDirectory>true</includeTestSourceDirectory>-->
+<!--          <linkXRef>false</linkXRef>-->
+<!--        </configuration>-->
+<!--      </plugin>-->
 
     </plugins>
   </reporting>

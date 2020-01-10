@@ -24,13 +24,16 @@
   <parent>
     <artifactId>flume-parent</artifactId>
     <groupId>org.apache.flume</groupId>
-    <version>1.8.0</version>
+    <version>1.8.0-es6-tian</version>
   </parent>
 
   <artifactId>flume-ng-dist</artifactId>
   <packaging>pom</packaging>
   <name>Flume NG distribution</name>
 
+  <properties>
+    <es.version>6.6.2</es.version>
+  </properties>
   <build>
     <plugins>
       <plugin>
@@ -95,10 +98,10 @@
           <groupId>org.apache.flume.flume-ng-sinks</groupId>
           <artifactId>flume-dataset-sink</artifactId>
         </dependency>
-        <dependency>
-          <groupId>org.apache.flume.flume-ng-sinks</groupId>
-          <artifactId>flume-hive-sink</artifactId>
-        </dependency>
+<!--        <dependency>-->
+<!--          <groupId>org.apache.flume.flume-ng-sinks</groupId>-->
+<!--          <artifactId>flume-hive-sink</artifactId>-->
+<!--        </dependency>-->
       </dependencies>
     </profile>
   </profiles>
@@ -144,30 +147,51 @@
       <groupId>org.apache.flume.flume-ng-sinks</groupId>
       <artifactId>flume-hdfs-sink</artifactId>
     </dependency>
+<!--    <dependency>-->
+<!--      <groupId>org.apache.flume.flume-ng-sinks</groupId>-->
+<!--      <artifactId>flume-irc-sink</artifactId>-->
+<!--    </dependency>-->
+<!--    <dependency>-->
+<!--      <groupId>org.apache.flume.flume-ng-sinks</groupId>-->
+<!--      <artifactId>flume-ng-hbase-sink</artifactId>-->
+<!--    </dependency>-->
+<!--    <dependency>-->
+<!--      <groupId>org.apache.flume.flume-ng-sinks</groupId>-->
+<!--      <artifactId>flume-http-sink</artifactId>-->
+<!--    </dependency>-->
     <dependency>
-      <groupId>org.apache.flume.flume-ng-sinks</groupId>
-      <artifactId>flume-irc-sink</artifactId>
+      <groupId>org.elasticsearch</groupId>
+      <artifactId>elasticsearch</artifactId>
+      <version>${es.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.httpcomponents</groupId>
+      <artifactId>httpclient</artifactId>
+      <version>4.4.1</version>
     </dependency>
     <dependency>
       <groupId>org.apache.flume.flume-ng-sinks</groupId>
-      <artifactId>flume-ng-hbase-sink</artifactId>
+      <artifactId>flume-ng-elasticsearch6.6-sink</artifactId>
+      <version>1.8.0-es6-tian</version>
+              <exclusions>
+                  <exclusion>
+                    <groupId>org.apache.httpcomponents</groupId>
+                    <artifactId>httpclient</artifactId>
+                  </exclusion>
+              </exclusions>
     </dependency>
-    <dependency>
-      <groupId>org.apache.flume.flume-ng-sinks</groupId>
-      <artifactId>flume-http-sink</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>org.apache.flume.flume-ng-sinks</groupId>
-      <artifactId>flume-ng-elasticsearch-sink</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>org.apache.flume.flume-ng-sinks</groupId>
-      <artifactId>flume-ng-morphline-solr-sink</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>org.apache.flume.flume-ng-sinks</groupId>
-      <artifactId>flume-ng-kafka-sink</artifactId>
-    </dependency>
+<!--    <dependency>-->
+<!--      <groupId>org.apache.flume.flume-ng-sinks</groupId>-->
+<!--      <artifactId>flume-ng-elasticsearch6.6-sink</artifactId>-->
+<!--    </dependency>-->
+<!--    <dependency>-->
+<!--      <groupId>org.apache.flume.flume-ng-sinks</groupId>-->
+<!--      <artifactId>flume-ng-morphline-solr-sink</artifactId>-->
+<!--    </dependency>-->
+<!--    <dependency>-->
+<!--      <groupId>org.apache.flume.flume-ng-sinks</groupId>-->
+<!--      <artifactId>flume-ng-kafka-sink</artifactId>-->
+<!--    </dependency>-->
     <dependency>
       <groupId>org.apache.flume.flume-ng-sources</groupId>
       <artifactId>flume-scribe-source</artifactId>
@@ -184,10 +208,10 @@
       <groupId>org.apache.flume.flume-ng-sources</groupId>
       <artifactId>flume-kafka-source</artifactId>
     </dependency>
-    <dependency>
-      <groupId>org.apache.flume.flume-ng-legacy-sources</groupId>
-      <artifactId>flume-avro-source</artifactId>
-    </dependency>
+<!--    <dependency>-->
+<!--      <groupId>org.apache.flume.flume-ng-legacy-sources</groupId>-->
+<!--      <artifactId>flume-avro-source</artifactId>-->
+<!--    </dependency>-->
     <dependency>
       <groupId>org.apache.flume.flume-ng-legacy-sources</groupId>
       <artifactId>flume-thrift-source</artifactId>
